@@ -1,32 +1,45 @@
 import React from "react";
-import "./Style/Header.css";
+import "./Header.css";
+import HomeIcon from "@material-ui/icons/Home";
+import FlashOnIcon from "@material-ui/icons/FlashOn";
+import LiveTvIcon from "@material-ui/icons/LiveTv";
+import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SearchIcon from "@material-ui/icons/Search";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import LanguageIcon from "@material-ui/icons/Language";
-import { Avatar } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/">
-        <img
-          className="header__icon"
-          src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-          alt="logo"
-        />
-      </Link>
-
-      <div className="header__center">
-        <input type="text" />
-        <SearchIcon />
+      <div className="header__icons">
+        <div className="header__icon header__icon--active">
+          <HomeIcon />
+          <p>Home</p>
+        </div>
+        <div className="header__icon">
+          <FlashOnIcon />
+          <p>Trending</p>
+        </div>
+        <div className="header__icon">
+          <LiveTvIcon />
+          <p>Verified</p>
+        </div>
+        <div className="header__icon">
+          <VideoLibraryIcon />
+          <p>Collections</p>
+        </div>
+        <div className="header__icon">
+          <SearchIcon />
+          <p>Search</p>
+        </div>
+        <div className="header__icon">
+          <PersonOutlineIcon />
+          <p>Account</p>
+        </div>
       </div>
-      <div className="header__right">
-        <p>Become a host</p>
-        <LanguageIcon />
-        <ExpandMoreIcon />
-        <Avatar />
-      </div>
+      <img
+        src="https://press.hulu.com/wp-content/uploads/2020/02/hulu-white.png"
+        alt=""
+      />
     </div>
   );
 };
